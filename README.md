@@ -54,15 +54,14 @@ Click on the Settings button
 The Client ID can be found here. The Client Secret can be found behind the View client secret link.
 
 With our credentials in hand, we are ready to request an access token. This tutorial uses the Client Credentials, so we must:
+- Send a POST request to the token endpoint URI.
+- Add the Content-Type header set to the application/x-www-form-urlencoded value.
+- Add a HTTP body containing the Client ID and Client Secret, along with the grant_type parameter set to client_credentials.
 
-Send a POST request to the token endpoint URI.
-Add the Content-Type header set to the application/x-www-form-urlencoded value.
-Add a HTTP body containing the Client ID and Client Secret, along with the grant_type parameter set to client_credentials.
+        curl -X POST "https://accounts.spotify.com/api/token" \
+       -H "Content-Type: application/x-www-form-urlencoded"
+       -d "grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret"
 
-    curl -X POST "https://accounts.spotify.com/api/token" \
-    -H "Content-Type: application/x-www-form-urlencoded"
-    -d "grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret"
-                          
 
 The response will return an access token valid for 1 hour:
   
