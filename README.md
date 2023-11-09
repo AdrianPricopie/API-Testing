@@ -85,46 +85,49 @@ Our API call must include the access token we have just generated using the Auth
 
 If everything goes well, the API will return the following JSON response:
 
-{
-  "external_urls": {
+    {
+    "external_urls": {
     "spotify": "https://open.spotify.com/artist/4Z8W4fKeB5YxbusRsdQVPb"
-  },
-  "followers": {
+     },
+     "followers": {
     "href": null,
     "total": 7625607
-  },
-  "genres": [
+     },
+     "genres": [
     "alternative rock",
     "art rock",
     "melancholia",
     "oxford indie",
     "permanent wave",
     "rock"
-  ],
-  "href": "https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb",
-  "id": "4Z8W4fKeB5YxbusRsdQVPb",
-  "images": [
-    {
-      "height": 640,
+     ],
+     "href": "https://api.spotify.com/v1/artists/4Z8W4fKeB5YxbusRsdQVPb",
+     "id": "4Z8W4fKeB5YxbusRsdQVPb",
+     "images": [
+      {
+       "height": 640,
       "url": "https://i.scdn.co/image/ab6761610000e5eba03696716c9ee605006047fd",
       "width": 640
-    },
-    {
+      },
+      {
       "height": 320,
       "url": "https://i.scdn.co/image/ab67616100005174a03696716c9ee605006047fd",
       "width": 320
-    },
-    {
+      },
+      {
       "height": 160,
       "url": "https://i.scdn.co/image/ab6761610000f178a03696716c9ee605006047fd",
       "width": 160
     }
-  ],
-  "name": "Radiohead",
-  "popularity": 79,
-  "type": "artist",
-  "uri": "spotify:artist:4Z8W4fKeB5YxbusRsdQVPb"
-}
+     ],
+    "name": "Radiohead",
+    "popularity": 79,
+    "type": "artist",
+    "uri": "spotify:artist:4Z8W4fKeB5YxbusRsdQVPb"
+     }
+
+
+
 
 Congratulations! You made your first API call to the Spotify Web API.
 
