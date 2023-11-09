@@ -63,11 +63,11 @@ curl -X POST "https://accounts.spotify.com/api/token" \
      -d "grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret"
 
 The response will return an access token valid for 1 hour:
-               {
-                "access_token": "BQDBKJ5eo5jxbtpWjVOj7ryS84khybFpP_lTqzV7uV-T_m0cTfwvdn5BnBSKPxKgEb11",
-                          "token_type": "Bearer",
-                                 "expires_in": 3600
-                                  }
+  
+        code:{"access_token": "BQDBKJ5eo5jxbtpWjVOj7ryS84khybFpP_lTqzV7uV-T_m0cTfwvdn5BnBSKPxKgEb11",
+             "token_type": "Bearer",
+              "expires_in": 3600}
+
 
 Request artist data
 For this example, we will use the Get Artist endpoint to request information about an artist. According to the API Reference, the endpoint needs the Spotify ID of the artist.
