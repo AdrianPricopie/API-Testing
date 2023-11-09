@@ -64,9 +64,9 @@ curl -X POST "https://accounts.spotify.com/api/token" \
 
 The response will return an access token valid for 1 hour:
   
-        code:{"access_token": "BQDBKJ5eo5jxbtpWjVOj7ryS84khybFpP_lTqzV7uV-T_m0cTfwvdn5BnBSKPxKgEb11",
-             "token_type": "Bearer",
-              "expires_in": 3600}
+    {"access_token": "BQDBKJ5eo5jxbtpWjVOj7ryS84khybFpP_lTqzV7uV-T_m0cTfwvdn5BnBSKPxKgEb11",
+     "token_type": "Bearer",
+      "expires_in": 3600}
 
 
 Request artist data
