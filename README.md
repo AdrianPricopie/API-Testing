@@ -19,7 +19,7 @@ This is where the magic begins! The following steps will help you to get started
  Use the access token in your API requests.
  You can follow the Getting started tutorial to learn how to make your first Web API call.
 
- Getting started with Web API
+### Getting started with Web API
 This tutorial will help you to make your first Web API call by retriving an artist's metadata. The steps to do so are the following:
 
 Create an app, if you haven't done so.
@@ -33,9 +33,9 @@ We will use cURL to make API calls. You can install it from here our using the p
 Set Up Your Account
 Login to the Spotify Developer Dashboard. If necessary, read the latest Developer Terms of Service to complete your account set up.
 
-Create an app
-An app provides the Client ID and Client Secret needed to request an access token by implementing any of the authorization flows.
+### Create an app
 
+An app provides the Client ID and Client Secret needed to request an access token by implementing any of the authorization flows.
 To create an app, go to your Dashboard, click on the Create an app button and enter the following information:
 
 App Name: My App
@@ -43,9 +43,9 @@ App Description: This is my first Spotify app
 Redirect URI: You won't need this parameter in this example, so let's use http://localhost:3000.
 Finally, check the Developer Terms of Service checkbox and tap on the Create button.
 
-Request an access token
-The access token is a string which contains the credentials and permissions that can be used to access a given resource (e.g artists, albums or tracks) or user's data (e.g your profile or your playlists).
+### Request an access token
 
+The access token is a string which contains the credentials and permissions that can be used to access a given resource (e.g artists, albums or tracks) or user's data (e.g your profile or your playlists).
 In order to request the access token you need to get your Client_ID and Client Secret:
 
 Go to the Dashboard
@@ -70,10 +70,10 @@ The response will return an access token valid for 1 hour:
       "expires_in": 3600}
 
 
-Request artist data
-For this example, we will use the Get Artist endpoint to request information about an artist. According to the API Reference, the endpoint needs the Spotify ID of the artist.
+### Request artist data
 
-An easy way to get the Spotify ID of an artist is using the Spotify Desktop App:
+- For this example, we will use the Get Artist endpoint to request information about an artist. According to the API Reference, the endpoint needs the Spotify ID of the artist.
+- An easy way to get the Spotify ID of an artist is using the Spotify Desktop App:
 
 Search the artist
 Click on the three dots icon from the artist profile
@@ -126,21 +126,15 @@ If everything goes well, the API will return the following JSON response:
     "uri": "spotify:artist:4Z8W4fKeB5YxbusRsdQVPb"
      }
 
+### Summary
 
-
-
-Congratulations! You made your first API call to the Spotify Web API.
-
-Summary
 The Spotify Web API provides different endpoints depending on the data we want to access. The API calls must include the Authorization header along with a valid access token.
-
 This tutorial makes use of the client credentials grant type to retrieve the access token. That works fine in scenarios where you control the API call to Spotify, for example where your backend is connecting to the Web API. It will not work in cases where your app will connect on behalf of a specific user, for example when getting private playlist or profile data.
 
-What's next?
+### What's next?
+
 The tutorial used the Spotify Desktop App to retrieve the Spotify ID of the artist. The ID can also be retrieved using the Search endpoint. An interesting exercise would be to extend the example with a new API call to the /search endpoint. Do you accept the challenge?
-
 The authorization guide provides detailed information about which authorization flow suits you best. Make sure you read it first!
-
 You can continue your journey by reading the API calls guide which describes in detail the Web API request and responses.
 
-Finally, if you are looking for a more practical documentation, you can follow the Display your Spotify Profile Data in a Web App how-to which implements a step-by-step web application using authorization code flow to request the access token.
+
