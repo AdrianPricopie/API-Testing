@@ -13,24 +13,30 @@ The Spotify Web API provides a wide range of functionality for developers, inclu
 
 ### Token creation
 
-First steps:
-Go to spotify.com and create a new user account.
-Access the dashboard and log in with the user account you created.
-Click on the "Create an app" button.
-Enter a name and description for the new aplication created.
-Accept the terms and conditions and click on the create button.
-In the opened window, click on "Edit Settings."
-In the Redirect URIs textbox, enter a link. It doesn't have to be specific, but one that can be used later. Example: http://applicationcourse/callback.
-Click on the SAVE button at the bottom.
-second steps:
-Open Postman and create a new collection named "Spotify."
-Within the collection, create a new POST request
-Click on authorization and select from  dropbow type OAuth2.0
-In the Callback URL field, enter the Redirect URIs from the first steps. If you are using the Postman web app, you don't need to set it.
-Copy the Client ID and Client Secret from your application and paste them into Postman.
-We will treat these links as variables, so we will assign them names and set them as global variables instead of using the actual links.
-In the Access Token URL field, enter the link https://accounts.spotify.com/api/token. After that, put the link https://accounts.spotify.com/authorize in the Auth URL field, and enter the text "playlist-modify-public playlist-read-private playlist-modify-private" in the Scope field.
-Finally press "Get New  Acces Token".The token has been created
+## Token Creation
+
+### First Steps:
+
+- Go to [Spotify](https://www.spotify.com/) and create a new user account.
+- Access the dashboard and log in with the user account you created.
+- Click on the "Create an app" button.
+- Enter a name and description for the new application created.
+- Accept the terms and conditions and click on the create button.
+- In the opened window, click on "Edit Settings."
+- In the Redirect URIs textbox, enter a link. It doesn't have to be specific, but one that can be used later. Example: `http://applicationcourse/callback`.
+- Click on the SAVE button at the bottom.
+
+### Second Steps:
+
+- Open [Postman](https://www.postman.com/) and create a new collection named "Spotify."
+- Within the collection, create a new POST request.
+- Click on authorization and select from the dropdown type OAuth 2.0.
+- In the Callback URL field, enter the Redirect URIs from the first steps. If you are using the Postman web app, you don't need to set it.
+- Copy the Client ID and Client Secret from your application and paste them into Postman.
+- Treat these links as variables; assign them names and set them as global variables instead of using the actual links.
+- In the Access Token URL field, enter the link `https://accounts.spotify.com/api/token`. After that, put the link `https://accounts.spotify.com/authorize` in the Auth URL field, and enter the text "playlist-modify-public playlist-read-private playlist-modify-private" in the Scope field.
+- Finally, press "Get New Access Token". The token has been created.
+
 
 
 
