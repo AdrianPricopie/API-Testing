@@ -11,8 +11,6 @@ The Spotify Web API provides a wide range of functionality for developers, inclu
  And much more! You can find a complete list of available endpoints in the API Reference.
  For more details about documentation ,visit this website https://developer.spotify.com/documentation/web-api/tutorials/getting-started.
 
-### Token creation
-
 ## Token Creation
 
 ### First Steps:
