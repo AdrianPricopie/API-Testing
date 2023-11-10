@@ -12,7 +12,6 @@ The Spotify Web API provides a wide range of functionality for developers, inclu
  For more details about documentation ,visit this website https://developer.spotify.com/documentation/web-api/tutorials/getting-started.
 
 ##  How created the token:
-
 ### First Steps:
 
 - Go to [Spotify](https://www.spotify.com/) and create a new user account.
