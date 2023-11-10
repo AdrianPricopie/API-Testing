@@ -20,4 +20,6 @@ In this section, you can explore and perform tests on various types of operation
 - PUT and PATCH Requests: Update existing data, modify playlists, etc.
 - DELETE Requests: Remove playlists, tracks, etc.
 
+I sent requests to all the endpoints in the playlist section using all available HTTPS methods: GET, POST, PUT, DELETE.
+
 
