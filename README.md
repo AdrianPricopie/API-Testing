@@ -22,7 +22,7 @@ In this section, you can explore and perform tests on various types of operation
 
 I sent requests to all the endpoints in the playlist section using all available HTTPS methods: GET, POST, PUT, DELETE.
 
-### Test used for validation
+### Tests used for validation
 
 In this section, the following tests were conducted to validate the functionality and reliability of the Spotify Web API:
 
@@ -40,3 +40,6 @@ Verified the capability to update existing data, including modifying playlists. 
 DELETE Requests:
 
 Tested the removal of playlists, tracks, etc., using the DELETE request. Ensured that the deletion process was successful and reflected the desired changes.
+
+
+### requests with params and respons together with message 
