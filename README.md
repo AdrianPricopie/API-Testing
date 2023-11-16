@@ -79,11 +79,11 @@ Tested the removal of playlists, tracks, etc., using the DELETE request. Ensured
 
 ### requests with params and respons together with message 
 
-GET Requests:
-1. Retrieve information about an artist:
 
+#### GET Requests:
+
+1. Retrieve information about an artist:
 Request:
-bash
 GET  
 https://api.spotify.com/v1/artists/{id}
 Parameters:
