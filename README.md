@@ -86,8 +86,9 @@ Tested the removal of playlists, tracks, etc., using the DELETE request. Ensured
 Request:
 GET  
 https://api.spotify.com/v1/artists/{id}
-Parameters:
-artist_id: The unique identifier of the artist.
+
+ Parameters:
+ artist_id: The unique identifier of the artist.
 Response:
 Successful response: 200 OK
 Example response body json:
