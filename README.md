@@ -90,9 +90,8 @@ Parameters:
 artist_id: The unique identifier of the artist.
 Response:
 Successful response: 200 OK
-Example response body:
+Example response bodycjson:
 
--json
 
        {
        "external_urls": {
