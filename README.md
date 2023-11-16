@@ -78,3 +78,44 @@ Tested the removal of playlists, tracks, etc., using the DELETE request. Ensured
 
 
 ### requests with params and respons together with message 
+
+GET Requests:
+1. Retrieve information about an artist:
+
+Request:
+bash
+GET  
+https://api.spotify.com/v1/artists/{id}
+Parameters:
+artist_id: The unique identifier of the artist.
+Response:
+Successful response: 200 OK
+Example response body:
+json
+
+     {
+    "external_urls": {
+    "spotify": "string"
+    },
+    "followers": {
+    "href": "string",
+    "total": 0
+    },
+    "genres": ["Prog rock", "Grunge"],
+    "href": "string",
+    "id": "string",
+    "images": [
+    {
+      "url": "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228",
+      "height": 300,
+      "width": 300
+    }
+    ],
+    "name": "string",
+    "popularity": 0,
+    "type": "artist",
+    "uri": "string"
+    }
+Message:
+Successfully retrieved information about the artist.
+
