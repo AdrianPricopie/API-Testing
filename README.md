@@ -91,7 +91,8 @@ artist_id: The unique identifier of the artist.
 Response:
 Successful response: 200 OK
 Example response body:
-json
+
+-json
 
        {
        "external_urls": {
