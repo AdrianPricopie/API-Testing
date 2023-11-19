@@ -60,23 +60,19 @@ HTTP methods supported by this API are GET, POST, PUT, PATCH and DELETE.
 
 ### Tests used for validation
 
-In this section, the following tests were conducted to validate the functionality and reliability of the Spotify Web API:
-
-GET Requests:
-
-Tested the ability to retrieve information about favorite artists, albums, playlists, etc. Verified the correctness of the data returned.
-
-POST Requests:
-
-Conducted tests to create new playlists and add tracks to them. Ensured that the creation process and addition of tracks function as expected.
-
-PUT and PATCH Requests:
-
-Verified the capability to update existing data, including modifying playlists. Checked if the modifications were applied accurately.
-DELETE Requests:
-
-Tested the removal of playlists, tracks, etc., using the DELETE request. Ensured that the deletion process was successful and reflected the desired changes.
-
+for this API  autenthication token is needed
+I send responses to some endpoints:
+https://api.spotify.com/v1/users/{user_id}/playlists (Create playlist)
+https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Add Item to playlist)
+https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Update Item to playlist)
+https://api.spotify.com/v1/playlists/{playlist_id} (Get playlist)
+https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Remove playlistItem)
+https://api.spotify.com/v1/playlists/{playlist_id} (Change playlist details)
+https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Add item in playlist)
+https://api.spotify.com/v1/playlists/{playlist_id}/followers (Follow playlist)
+using all available HTTP methods
+the expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204 and 404).
+I wrote test-cases through which I validated the answer coming from the available templates that Postman offers.
 
 ### requests with params and respons together with message 
 
