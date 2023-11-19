@@ -307,9 +307,9 @@ Create a new playlist:
 POST
 Endpoint:
 https://api.spotify.com/v1/users/{user_id}/playlists
- - Parameters:
+Parameters
  - user_id: The unique identifier of the user creating the playlist.
-Response:
+#### Response:
  - Successful response: 201 Created
  - Example response body json:
    
