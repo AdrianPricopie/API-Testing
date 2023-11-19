@@ -61,7 +61,7 @@ HTTP methods supported by this API are GET, POST, PUT, PATCH and DELETE.
 ### Tests used for validation
 
 for this API  autenthication token is needed
-I send responses to some endpoints:
+ #### I send responses to some endpoints:
 - https://api.spotify.com/v1/users/{user_id}/playlists (Create playlist)
 - https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Add Item to playlist)
 - https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Update Item to playlist)
