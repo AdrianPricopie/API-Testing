@@ -1,17 +1,16 @@
+# Introduction
 
-## Introduction
-
-### API reference
+## API reference
 The Spotify Web API provides a wide range of functionality for developers, including:
- Retrieve data from your favourite artist, album or show.
- Search for Spotify content.
- Control and interact with the playback, play and resume, Seek to a position or retrieve your queue.
- Manage your personal library, by creating a new playlist and adding your favourite tracks to it.
- Get recommendations based on the music you listen the most.
- And much more! You can find a complete list of available endpoints in the API Reference.
- For more details about documentation ,visit this website https://developer.spotify.com/documentation/web-api/tutorials/getting-started.
+- Retrieve data from your favorite artist, album, or show.
+- Search for Spotify content.
+- Control and interact with the playback, play and resume, seek to a position, or retrieve your queue.
+- Manage your personal library by creating a new playlist and adding your favorite tracks to it.
+- Get recommendations based on the music you listen to the most.
+- And much more! You can find a complete list of available endpoints in the [API Reference](https://developer.spotify.com/documentation/web-api/tutorials/getting-started).
+For more details about documentation, visit this [website](https://developer.spotify.com/documentation/web-api/tutorials/getting-started).
 
-##  How was created the token
+## How the token was created
 ### First Steps:
 
 - Go to [Spotify](https://www.spotify.com/) and create a new user account.
@@ -34,44 +33,29 @@ The Spotify Web API provides a wide range of functionality for developers, inclu
 - In the Access Token URL field, enter the link `https://accounts.spotify.com/api/token`. After that, put the link `https://accounts.spotify.com/authorize` in the Auth URL field, and enter the text "playlist-modify-public playlist-read-private playlist-modify-private" in the Scope field.
 - Finally, press "Get New Access Token". The token has been created.
 
+## Types available for testing
 
+HTTP methods supported by this API are GET, POST, PUT, PATCH, and DELETE. In this section, you can explore and perform tests on various types of operations supported by the Spotify Web API. Some examples include:
 
+- **GET Requests:** Retrieve information about artists, albums, playlists, etc.
+- **POST Requests:** Create new playlists, add tracks, etc.
+- **PUT and PATCH Requests:** Update existing data, modify playlists, etc.
+- **DELETE Requests:** Remove playlists, tracks, etc.
 
+## Tests used for validation
 
-
-
-
-
-
-
-
- 
-
-### Types available for testing
-
-HTTP methods supported by this API are GET, POST, PUT, PATCH and DELETE.
- In this section, you can explore and perform tests on various types of operations supported by the Spotify Web API. Some examples include:
-
-- GET Requests: Retrieve information about artists, albums, playlists, etc.
-- POST Requests: Create new playlists, add tracks, etc.
-- PUT and PATCH Requests: Update existing data, modify playlists, etc.
-- DELETE Requests: Remove playlists, tracks, etc.
-
-
-### Tests used for validation
-
-for this API  autenthication token is needed
- #### I send responses to some endpoints:
-- https://api.spotify.com/v1/users/{user_id}/playlists (Create playlist)
-- https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Add Item to playlist)
-- https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Update Item to playlist)
-- https://api.spotify.com/v1/playlists/{playlist_id} (Get playlist)
-- https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Remove playlistItem)
-- https://api.spotify.com/v1/playlists/{playlist_id} (Change playlist details)
-- https://api.spotify.com/v1/playlists/{playlist_id}/tracks (Add item in playlist)
-- https://api.spotify.com/v1/playlists/{playlist_id}/followers (Follow playlist)
-- using all available HTTP methods
-- the expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204 and 404).
+For this API, an authentication token is needed.
+#### I send responses to some endpoints:
+- `https://api.spotify.com/v1/users/{user_id}/playlists` (Create playlist)
+- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Add Item to playlist)
+- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Update Item to playlist)
+- `https://api.spotify.com/v1/playlists/{playlist_id}` (Get playlist)
+- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Remove playlistItem)
+- `https://api.spotify.com/v1/playlists/{playlist_id}` (Change playlist details)
+- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Add item in playlist)
+- `https://api.spotify.com/v1/playlists/{playlist_id}/followers` (Follow playlist)
+- Using all available HTTP methods.
+- The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204, and 404).
 - I wrote test-cases through which I validated the answer coming from the available templates that Postman offers.
 
 ### requests with params and respons together with message 
