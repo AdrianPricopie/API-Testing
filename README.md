@@ -125,6 +125,7 @@ Retrieve information about a playlist:
 Request:
 GET
 Endpoint:https://api.spotify.com/v1/playlists/{playlist_id}
+
 Parameters:
  - playlist_id: The unique identifier of the playlist.
 Response:
@@ -292,5 +293,67 @@ Response:
 
 Message:
 Successfully retrieved information about the playlist.
+
+#### POST Requests:
+Create a new playlist:
+ - Request body:
+ 
+        {
+       "name": "New Playlist",
+       "description": "New playlist description",
+       "public": false
+        }
+
+POST
+Endpoint:
+https://api.spotify.com/v1/users/{user_id}/playlists
+Parameters:
+ - user_id: The unique identifier of the user creating the playlist.
+Response:
+ - Successful response: 201 Created
+ - Example response body json:
+   
+    
+        {
+       "collaborative": false,
+       "description": "Noua descriere",
+       "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/0bRMJdlcZYQxmNGXWdKHFC"
+        },
+        "followers": {
+        "href": null,
+        "total": 0
+       },
+       "href": "https://api.spotify.com/v1/playlists/0bRMJdlcZYQxmNGXWdKHFC",
+       "id": "0bRMJdlcZYQxmNGXWdKHFC",
+       "images": [],
+       "name": "New playlist",
+       "owner": {
+        "display_name": "Adrian Pricopie",
+        "external_urls": {
+            "spotify": "https://open.spotify.com/user/31klgihdqmygxigfetdciouflnfu"
+        },
+        "href": "https://api.spotify.com/v1/users/31klgihdqmygxigfetdciouflnfu",
+        "id": "31klgihdqmygxigfetdciouflnfu",
+        "type": "user",
+        "uri": "spotify:user:31klgihdqmygxigfetdciouflnfu"
+       },
+       "primary_color": null,
+       "public": false,
+       "snapshot_id": "MSxkYzg3ZjExYTBlOWY3YWY2MjJjN2U2OTJhZDg5NjJlMzU5MDQ2NjM4",
+       "tracks": {
+        "href": "https://api.spotify.com/v1/playlists/0bRMJdlcZYQxmNGXWdKHFC/tracks",
+        "items": [],
+        "limit": 100,
+        "next": null,
+        "offset": 0,
+        "previous": null,
+        "total": 0
+        },
+       "type": "playlist",
+       "uri": "spotify:playlist:0bRMJdlcZYQxmNGXWdKHFC"
+       }
+
+
 
 
