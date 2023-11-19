@@ -129,10 +129,9 @@ Parameters:
  - playlist_id: The unique identifier of the playlist.
 Response:
  - Successful response: 200 OK
-Example response body json:
+   
+ -Example response body json:
  
-Copy code:
-
      {
     "collaborative": false,
     "description": "string",
