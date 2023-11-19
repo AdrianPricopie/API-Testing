@@ -49,6 +49,7 @@ The Spotify Web API provides a wide range of functionality for developers, inclu
 
 ### types available for testing
 
+HTTP methods supported by this API are GET, POST, PUT, PATCH and DELETE
 In this section, you can explore and perform tests on various types of operations supported by the Spotify Web API. Some examples include:
 
 - GET Requests: Retrieve information about artists, albums, playlists, etc.
