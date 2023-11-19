@@ -24,7 +24,7 @@ For more details about documentation, visit this [website](https://developer.spo
 
 ### Second Steps:
 
-- Open [Postman](https://www.postman.com/) and create a new collection named "Spotify."
+- Open Postman aplication,you can download this  [Postman](https://www.postman.com/) and create a new collection named "Spotify."
 - Within the collection, create a new POST request.
 - Click on authorization and select from the dropdown type OAuth 2.0.
 - In the Callback URL field, enter the Redirect URIs from the first steps. If you are using the Postman web app, you don't need to set it.
