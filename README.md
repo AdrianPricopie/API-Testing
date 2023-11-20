@@ -55,7 +55,7 @@ For this API, an authentication token is needed.
 - `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Add item in playlist)
 - `https://api.spotify.com/v1/playlists/{playlist_id}/followers` (Follow playlist)
 - Using all available HTTP methods.
-- The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204, and 404).
+- The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204,404 and 401).
 - I wrote test-cases through which I validated the answer coming from the available templates that Postman offers.
   Here you can find the list of [Test conditions](https://github.com/legendadr/API-Testing/blob/main/API_CheckList_TestCondition.xlsx) in Postman.
 
