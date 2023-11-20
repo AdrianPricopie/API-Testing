@@ -57,6 +57,7 @@ For this API, an authentication token is needed.
 - Using all available HTTP methods.
 - The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204, and 404).
 - I wrote test-cases through which I validated the answer coming from the available templates that Postman offers.
+  Here you can find the list of [Test conditions](https://github.com/legendadr/API-Testing/blob/main/API_CheckList_TestCondition.xlsx) in Postman.
 
 ### requests with params and respons together with message 
 
