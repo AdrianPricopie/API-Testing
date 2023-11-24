@@ -364,8 +364,9 @@ Parameters
 
 ## Change Playlist Details
 
-Endpoint:
-https://api.spotify.com/v1/playlists/{playlist_id}
+- **Endpoint:**
+  ```plaintext
+  https://api.spotify.com/v1/playlists/{playlist_id}
 
 ### Parameters:
 
