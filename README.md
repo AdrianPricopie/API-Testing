@@ -355,6 +355,11 @@ Parameters
     "insert_before": 3,
     "range_length": 2
     }
+### Response:
+
+- Successful response: `200 OK`
+- A snapshot ID for the playlist
+
 
 
 ## Change Playlist Details
