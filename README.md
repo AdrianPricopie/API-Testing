@@ -364,18 +364,12 @@ Parameters
 
 ## Change Playlist Details
 
-### Response:
-
-- Successful response: `200 OK`
-  - A snapshot ID for the playlist
-
-Change Playlist Details
-
 Endpoint:
 https://api.spotify.com/v1/playlists/{playlist_id}
 
-parameters:
-playlist_id: The unique identifier of the playlist
+### Parameters:
+
+- `playlist_id`: The unique identifier of the playlist.
 
 Request body (Example):
 
@@ -384,11 +378,11 @@ Request body (Example):
     "description": "Updated playlist description",
     "public": false
     }
-Response:
 
-Successful response: 
-- 200 OK
-- A snapshot ID for the updated playlist
+### Response:
+
+- Successful response: `200 OK`
+- A snapshot ID for the playlist
 
 
 
