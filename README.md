@@ -337,5 +337,53 @@ Parameters
        }
 
 
+## PUT Requests:
+
+### Reordering the existing tracks in the playlist:
+
+- **Endpoint:**
+  ```plaintext
+  https://api.spotify.com/v1/playlists/{playlist_id}/tracks
+
+### Parameters:
+
+- `playlist_id`: The unique identifier of the playlist.
+
+### Request body:
+     {
+    "range_start": 1,
+    "insert_before": 3,
+    "range_length": 2
+    }
+
+
+## Change Playlist Details
+
+### Response:
+
+- Successful response: `200 OK`
+  - A snapshot ID for the playlist
+
+Change Playlist Details
+
+Endpoint:
+https://api.spotify.com/v1/playlists/{playlist_id}
+
+parameters:
+playlist_id: The unique identifier of the playlist
+
+Request body (Example):
+
+    {
+     "name": "New Playlist Name",
+    "description": "Updated playlist description",
+    "public": false
+    }
+Response:
+
+Successful response: 
+- 200 OK
+- A snapshot ID for the updated playlist
+
 
 
