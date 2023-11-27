@@ -1,0 +1,736 @@
+{
+	"info": {
+		"_postman_id": "ac0b01e7-66ec-4afb-b3a6-0444e8d28716",
+		"name": "Spotify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29881829"
+	},
+	"item": [
+		{
+			"name": "CreateToken",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "redirect_uri",
+							"value": "http://itfactory/callback",
+							"type": "string"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "playlist-modify-public playlist-read-private playlist-modify-private",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "https://accounts.spotify.com/authorize",
+							"type": "string"
+						},
+						{
+							"key": "accessTokenUrl",
+							"value": "https://accounts.spotify.com/api/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "{{Client secret}}",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "{{ClientID}}",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": " Basic <code>*",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePlaylist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that the Status code is 201 Created\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Verify that the status message is Created\", function () {\r",
+							"    pm.response.to.have.status(\"Created\");\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify if that Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"pm.test(\"Check playlist owner.\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.owner.display_name).to.eql(\"Adrian Pricopie\");\r",
+							"});\r",
+							"pm.test(\"Check playlist type.\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.public).to.eql(false);\r",
+							"});\r",
+							"pm.test(\"Check playlist name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.eql(\"New playlist\");\r",
+							"});\r",
+							"pm.test(\"Check playlist description\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.description).to.eql(\"Noua descriere\");\r",
+							"});\r",
+							"pm.test(\"Check total number of followers\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.followers.total).to.eql(0);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQAO6iMzCaDbFz_Q8uCnMxNyxBcQ4lbO1h0t_ohlN4vFdeU6VAHdS7H0M_oiJS34YZP0VZRf7TB_fcSDU9iiHq-XFld6Jy_1SMVBFnwvhAZ0kRRyPj8GS_qIzTUcVsqCsPSvXbUNut3yr7h5XMLzaQnfglfxqGxHsalySotrjsD2Az2DB8968CToV-C66illcs5QJf9TR_YVtZfrETr3Q0Ya_NAa85YqGrmsp33U2O6PiDt6Hub7WiRZLc0lSYjkRIAFHsFtHTwW8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded ",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": " Basic BQAsOCyx0TSIKfEnRLRS4Kv_P3p0UjLzXOy421fBiVPhNJ0Ywc2PIQ9jLME84QwhC1cCJxV17NNmGLneBqVYbuOCuGGimxzueVA-6fuNoc0dSJr_VKoqY7lMRJ-WlSguVo4HRVUHTAhm08gbm55bXDuNzumv8Kz4n_xCvhp8H7uBko1iXWUcImCzCXOdd1ku2nRJE81ugo66o-TIoLlXm_dutxiNG0cZzZ5Vj5puUx_ggPr99SQIMiRaw1cvOil0i6HlPmL7sqZO9g",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"New playlist\",\r\n    \"description\": \"Noua descriere\",\r\n    \"public\": false\r\n}\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/users/{{MyIdUser}}/playlists",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"users",
+						"{{MyIdUser}}",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddItemInPlaylist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that Status code is 201 Created\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"pm.test(\"Verify if that Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"pm.test(\"Verify that snapshot_id exists and has 60 characters\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var snapshotId = jsonData.snapshot_id;\r",
+							"    pm.expect(snapshotId).to.exist;\r",
+							"    pm.expect(snapshotId).to.have.length(60);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQAO6iMzCaDbFz_Q8uCnMxNyxBcQ4lbO1h0t_ohlN4vFdeU6VAHdS7H0M_oiJS34YZP0VZRf7TB_fcSDU9iiHq-XFld6Jy_1SMVBFnwvhAZ0kRRyPj8GS_qIzTUcVsqCsPSvXbUNut3yr7h5XMLzaQnfglfxqGxHsalySotrjsD2Az2DB8968CToV-C66illcs5QJf9TR_YVtZfrETr3Q0Ya_NAa85YqGrmsp33U2O6PiDt6Hub7WiRZLc0lSYjkRIAFHsFtHTwW8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uris\": [\r\n        \"spotify:track:0zVLDCLwjjQNlW83RfFOaj\"\r\n    ],\r\n    \"position\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/0TaUzklrbGfM49922qcoAZ/tracks",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"0TaUzklrbGfM49922qcoAZ",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePlaylistItem",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Verify if that Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"pm.test(\"Verify that snapshot_id exists and has 60 characters\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var snapshotId = jsonData.snapshot_id;\r",
+							"    pm.expect(snapshotId).to.exist;\r",
+							"    pm.expect(snapshotId).to.have.length(60);\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQAO6iMzCaDbFz_Q8uCnMxNyxBcQ4lbO1h0t_ohlN4vFdeU6VAHdS7H0M_oiJS34YZP0VZRf7TB_fcSDU9iiHq-XFld6Jy_1SMVBFnwvhAZ0kRRyPj8GS_qIzTUcVsqCsPSvXbUNut3yr7h5XMLzaQnfglfxqGxHsalySotrjsD2Az2DB8968CToV-C66illcs5QJf9TR_YVtZfrETr3Q0Ya_NAa85YqGrmsp33U2O6PiDt6Hub7WiRZLc0lSYjkRIAFHsFtHTwW8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"range_start\": 0,\r\n    \"insert_before\": 4,\r\n    \"range_length\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/0TaUzklrbGfM49922qcoAZ/tracks",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"0TaUzklrbGfM49922qcoAZ",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPlayList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that the Status code is 200 \", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Verify that the status message is  OK \", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Verify  that Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"pm.test(\"Check playlist owner.\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.owner.display_name).to.eql(\"Adrian Pricopie\");\r",
+							"});\r",
+							"pm.test(\"Check playlist type.\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.public).to.eql(false);\r",
+							"});\r",
+							"pm.test(\"Check playlist name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.name).to.eql(\"Update3 Playlist Name\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check total number of followers\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.followers.total).to.eql(0);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQAO6iMzCaDbFz_Q8uCnMxNyxBcQ4lbO1h0t_ohlN4vFdeU6VAHdS7H0M_oiJS34YZP0VZRf7TB_fcSDU9iiHq-XFld6Jy_1SMVBFnwvhAZ0kRRyPj8GS_qIzTUcVsqCsPSvXbUNut3yr7h5XMLzaQnfglfxqGxHsalySotrjsD2Az2DB8968CToV-C66illcs5QJf9TR_YVtZfrETr3Q0Ya_NAa85YqGrmsp33U2O6PiDt6Hub7WiRZLc0lSYjkRIAFHsFtHTwW8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/0TaUzklrbGfM49922qcoAZ",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"0TaUzklrbGfM49922qcoAZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemovePlaylistItem",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Verify if that Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"pm.test(\"Verify that snapshot_id exists and has 60 characters\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var snapshotId = jsonData.snapshot_id;\r",
+							"    pm.expect(snapshotId).to.exist;\r",
+							"    pm.expect(snapshotId).to.have.length(60);\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQAO6iMzCaDbFz_Q8uCnMxNyxBcQ4lbO1h0t_ohlN4vFdeU6VAHdS7H0M_oiJS34YZP0VZRf7TB_fcSDU9iiHq-XFld6Jy_1SMVBFnwvhAZ0kRRyPj8GS_qIzTUcVsqCsPSvXbUNut3yr7h5XMLzaQnfglfxqGxHsalySotrjsD2Az2DB8968CToV-C66illcs5QJf9TR_YVtZfrETr3Q0Ya_NAa85YqGrmsp33U2O6PiDt6Hub7WiRZLc0lSYjkRIAFHsFtHTwW8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tracks\": [\r\n        {\r\n            \"uri\": \"spotify:track:0zVLDCLwjjQNlW83RfFOaj\"\r\n            \r\n        }\r\n    ],\r\n    \"snapshot_id\": \"MjYsYzViMzI1OTY0MzY0YjIwMDE4YjU4YjU4MGYwNGZmOWMyZDYwNWJjYQ==\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/0TaUzklrbGfM49922qcoAZ/tracks",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"0TaUzklrbGfM49922qcoAZ",
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangePlaylistDetails",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that Status code is 200 OK\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify that Response body is empty\", function () {\r",
+							"    pm.expect(pm.response.text()).to.be.empty;\r",
+							"});\r",
+							"pm.test(\"Verify that Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQAO6iMzCaDbFz_Q8uCnMxNyxBcQ4lbO1h0t_ohlN4vFdeU6VAHdS7H0M_oiJS34YZP0VZRf7TB_fcSDU9iiHq-XFld6Jy_1SMVBFnwvhAZ0kRRyPj8GS_qIzTUcVsqCsPSvXbUNut3yr7h5XMLzaQnfglfxqGxHsalySotrjsD2Az2DB8968CToV-C66illcs5QJf9TR_YVtZfrETr3Q0Ya_NAa85YqGrmsp33U2O6PiDt6Hub7WiRZLc0lSYjkRIAFHsFtHTwW8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Update3 Playlist Name\",\r\n    \"description\": \"Updated playlist description\",\r\n    \"public\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/0TaUzklrbGfM49922qcoAZ",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"0TaUzklrbGfM49922qcoAZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetArtist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"pm.test(\"Verify that Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Verify that Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"pm.test(\"Verify that Response has at least one image\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.images).to.be.an(\"array\").that.is.not.empty;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify that response has an ID\",function(){\r",
+							"  var jsonData=pm.response.json();\r",
+							"  pm.expect(jsonData.id).to.equals(\"3TVXtAsR1Inumwj472S9r4\");\r",
+							" \r",
+							"});\r",
+							"pm.test(\"Check if the total number of followers is within the range 1,000,000 to 100,000,000\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.followers.total).to.be.within(1000000, 100000000);\r",
+							"});\r",
+							"pm.test(\"Verify that popularity is a number  \",function()\r",
+							"{\r",
+							" var jsonData=pm.response.json();\r",
+							" pm.expect(jsonData.popularity).to.be.a(\"number\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify that Artist name is Drake\", function () {\r",
+							"    pm.expect(pm.response.json().name).to.equal(\"Drake\");\r",
+							"});\r",
+							"pm.test(\"Verify that Artist popularity is greater than 90\", function () {\r",
+							"    pm.expect(pm.response.json().popularity).to.be.above(90);\r",
+							"});\r",
+							"pm.test(\"Check if the genres include hip hop,pop rap ,canadian pop and canadian hip hop\", function () {\r",
+							"    var genres = pm.response.json().genres;\r",
+							"    pm.expect(genres).to.include.members([\"hip hop\", \"pop rap\",\"canadian hip hop\",\"canadian pop\"]);\r",
+							"});\r",
+							"pm.test(\"Check if the height and width of the first image are both 640\", function () {\r",
+							"\r",
+							"    var jsonData = pm.response.json().images;\r",
+							"    pm.expect(jsonData[0].height).to.eql(640);\r",
+							"     pm.expect(jsonData[0].width).to.eql(640);\r",
+							"});\r",
+							"pm.test(\"Check  if  the height and width of the second image are both 320\", function () {\r",
+							"    var jsonData = pm.response.json().images;\r",
+							"    pm.expect(jsonData[1].height).to.eql(320);\r",
+							"     pm.expect(jsonData[1].width).to.eql(320);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQAO6iMzCaDbFz_Q8uCnMxNyxBcQ4lbO1h0t_ohlN4vFdeU6VAHdS7H0M_oiJS34YZP0VZRf7TB_fcSDU9iiHq-XFld6Jy_1SMVBFnwvhAZ0kRRyPj8GS_qIzTUcVsqCsPSvXbUNut3yr7h5XMLzaQnfglfxqGxHsalySotrjsD2Az2DB8968CToV-C66illcs5QJf9TR_YVtZfrETr3Q0Ya_NAa85YqGrmsp33U2O6PiDt6Hub7WiRZLc0lSYjkRIAFHsFtHTwW8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"artists",
+						"3TVXtAsR1Inumwj472S9r4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FollowPlaylist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"pm.test(\"Verify that Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "BQAO6iMzCaDbFz_Q8uCnMxNyxBcQ4lbO1h0t_ohlN4vFdeU6VAHdS7H0M_oiJS34YZP0VZRf7TB_fcSDU9iiHq-XFld6Jy_1SMVBFnwvhAZ0kRRyPj8GS_qIzTUcVsqCsPSvXbUNut3yr7h5XMLzaQnfglfxqGxHsalySotrjsD2Az2DB8968CToV-C66illcs5QJf9TR_YVtZfrETr3Q0Ya_NAa85YqGrmsp33U2O6PiDt6Hub7WiRZLc0lSYjkRIAFHsFtHTwW8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"public\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n/followers",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"3cEYpjA9oz9GiPac4AsH4n",
+						"followers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FollowPlaylistWithInvalidToken",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify that the Status code is 401\", function () {\r",
+							"    pm.response.to.have.status(401);\r",
+							"});\r",
+							"pm.test(\"Verify if the response returned an error when we are using an invalid token \", function () {\r",
+							"    var raspuns = pm.response.json().error;\r",
+							"    pm.expect(raspuns.message).to.eql(\"Invalid access token\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify if that Response time is less than 400ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify that the status message is Unauthorized\", function () {\r",
+							"    pm.response.to.have.status(\"Unauthorized\");\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "dQAO6iMzCaDbFz_Q8uCnMxNyxBcQ4lbO1h0t_ohlN4vFdeU6VAHdS7H0M_oiJS34YZP0VZRf7TB_fcSDU9iiHq-XFld6Jy_1SMVBFnwvhAZ0kRRyPj8GS_qIzTUcVsqCsPSvXbUNut3yr7h5XMLzaQnfglfxqGxHsalySotrjsD2Az2DB8968CToV-C66illcs5QJf9TR_YVtZfrETr3Q0Ya_NAa85YqGrmsp33U2O6PiDt6Hub7WiRZLc0lSYjkRIAFHsFtHTwW8A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"public\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n/followers",
+					"protocol": "https",
+					"host": [
+						"api",
+						"spotify",
+						"com"
+					],
+					"path": [
+						"v1",
+						"playlists",
+						"3cEYpjA9oz9GiPac4AsH4n",
+						"followers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
