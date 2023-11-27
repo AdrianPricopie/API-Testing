@@ -455,24 +455,7 @@ The playlist's snapshot ID against which you want to make the changes. The API w
 - Successful response: `200 OK`
 - A snapshot ID for the playlist
 
-  
-### Unfollowing a playlist:
 
-- **Endpoint:**
-  ```plaintext
-  https://api.spotify.com/v1/playlists/{playlist_id}/followers
-
-  
-### Parameters:
-
-- `playlist_id`: The unique identifier of the playlist.
-
-  
-### Response:
-
-- Successful response: `200 OK`
-- Playlist unfollowed.
-  
 
 
 
