@@ -419,6 +419,59 @@ The position to insert the items, a zero-based index. For example, to insert the
 - Successful response: `201 Created`
 - A snapshot ID for the playlist
 
+## DELETE Request:
+
+### Removing a track from the playlist:
+
+- **Endpoint:**
+  ```plaintext
+  https://api.spotify.com/v1/playlists/{playlist_id}/tracks
+
+
+### Parameters:
+
+- `playlist_id`: The unique identifier of the playlist.
+
+
+  ### Request body:
+      {
+      "tracks": [
+        {
+            "uri": "string"
+        }
+      ],
+      "snapshot_id": "string"
+      }
+
+  - tracks:array of objects (requirment)
+An array of objects containing Spotify URIs of the tracks or episodes to remove. For example: { "tracks": [{ "uri": "spotify:track:4iV5W9uYEdYUVa79Axb7Rh" },{ "uri": "spotify:track:1301WleyT98MSxVHPZCA6M" }] }. A maximum of 100 objects can be sent at once.
+
+  - snapshot_id:string
+The playlist's snapshot ID against which you want to make the changes. The API will validate that the specified items exist and in the specified positions and make the changes, even if more recent changes have been made to the playlist.
+
+
+### Response:
+
+- Successful response: `200 OK`
+- A snapshot ID for the playlist
+
+  
+### Unfollowing a playlist:
+
+- **Endpoint:**
+  ```plaintext
+  https://api.spotify.com/v1/playlists/{playlist_id}/followers
+
+  
+### Parameters:
+
+- `playlist_id`: The unique identifier of the playlist.
+
+  
+### Response:
+
+- Successful response: `200 OK`
+- Playlist unfollowed.
   
 
 
