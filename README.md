@@ -33,6 +33,8 @@ For more details about documentation, visit this [website](https://developer.spo
 - In the Access Token URL field, enter the link `https://accounts.spotify.com/api/token`. After that, put the link `https://accounts.spotify.com/authorize` in the Auth URL field, and enter the text "playlist-modify-public playlist-read-private playlist-modify-private" in the Scope field.
 - Finally, press "Get New Access Token". The token has been created.
 
+The response will return an **access token valid for 1 hour**
+
 ## Types available for testing
 
 HTTP methods supported by this API are GET, POST, PUT, PATCH, and DELETE. In this section, you can explore and perform tests on various types of operations supported by the Spotify Web API. Some examples include:
