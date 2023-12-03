@@ -461,7 +461,7 @@ The playlist's snapshot ID against which you want to make the changes. The API w
 ## Link to collection from postman,screenshot and run with newman:
 
 ![Screenshot from postman](https://github.com/legendadr/API-Testing/blob/main/Spotify%20-%20My%20Workspace%2027.11.2023%2012_46_59.png)
-[Collection newman ](https://github.com/legendadr/API-Testing/blob/main/Spotify.postman_collection.json)
+[Collection newman ](https://github.com/legendadr/API-Testing/blob/main/postman2.png)
 
 
 
