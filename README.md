@@ -102,7 +102,92 @@ Endpoint:https://api.spotify.com/v1/artists/{id}
          "uri": "string"
         }
 Message:
-Successfully retrieved information about the artist.
+
+- Successful response: `200 OK`
+#### Artist Schema
+
+- **external_urls**
+  - object
+    - **spotify**
+      - string
+      - The Spotify URL for the object.
+
+- **followers**
+  - object
+    - **href**
+      - string (Nullable)
+      - This will always be set to null, as the Web API does not support it at the moment.
+    - **total**
+      - integer
+      - The total number of followers.
+
+- **genres**
+  - array of strings
+  - A list of the genres the artist is associated with. If not yet classified, the array is empty.
+    - Example: ["Prog rock","Grunge"]
+
+- **href**
+  - string
+  - A link to the Web API endpoint providing full details of the artist.
+
+- **id**
+  - string
+  - The Spotify ID for the artist.
+
+- **images**
+  - array of ImageObject
+    - **url**
+      - string (Required)
+      - The source URL of the image.
+    - **height**
+      - integer (Required Nullable)
+      - The image height in pixels.
+    - **width**
+      - integer (Required Nullable)
+      - The image width in pixels.
+    - **name**
+      - string
+      - The name of the artist.
+
+- **popularity**
+  - integer
+  - The popularity of the artist. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.
+
+- **type**
+  - string
+  - The object type.
+    - Allowed values: "artist"
+
+- **uri**
+  - string
+  - The Spotify URI for the artist.
+
+  - Response 401: 
+#### Bad or Expired Token Error
+
+- **error**
+  - object (Required)
+    - **status**
+      - integer (Required)
+      - The HTTP status code (also returned in the response header; see Response Status Codes for more information).
+        - Range: 400 - 599
+    - **message**
+      - string (Required)
+      - A short description of the cause of the error.
+        
+
+  - Response 403:
+#### Bad OAuth Request Error
+
+- **error**
+  - object (Required)
+    - **status**
+      - integer (Required)
+      - The HTTP status code (also returned in the response header; see Response Status Codes for more information).
+        - Range: 400 - 599
+    - **message**
+      - string (Required)
+      - A short description of the cause of the error.
 
 #### GET Requests:
 Retrieve information about a playlist:
