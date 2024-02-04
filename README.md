@@ -19,7 +19,6 @@ Tools used: Postman, Newman.
 
 
 ![Screenshot from postman](https://github.com/legendadr/API-Testing/blob/main/postman.png)
-![Screenshot from postman](https://github.com/legendadr/API-Testing/blob/main/java%20script%20test%20result%20for%20create%20playlist.png)
 
 
 
