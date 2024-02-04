@@ -1,7 +1,9 @@
-# Introduction-Spotify API testing
+# API Testing project for spotify
 
-## API reference
-The Spotify Web API provides a wide range of functionality for developers, including:
+The scope of this project is to use all API knowledge gained throught the Software Testing course and apply them in practice, using a live application.
+
+Application under test:
+The **Spotify** Web API provides a wide range of functionality for developers, including:
 - Retrieve data from your favorite artist, album, or show.
 - Search for Spotify content.
 - Control and interact with the playback, play and resume, seek to a position, or retrieve your queue.
@@ -9,6 +11,18 @@ The Spotify Web API provides a wide range of functionality for developers, inclu
 - Get recommendations based on the music you listen to the most.
 - And much more! You can find a complete list of available endpoints in the [API Reference](https://developer.spotify.com/documentation/web-api/tutorials/getting-started).
 For more details about documentation, visit this [website](https://developer.spotify.com/documentation/web-api/tutorials/getting-started).
+
+Tools used: Postman, Newman.
+
+ Link to collection from postman,screenshot and run with newman: [Collection newman ](https://github.com/legendadr/API-Testing/blob/main/Spotify.postman_collection.json)
+ ,[Global-environment ](https://github.com/legendadr/API-Testing/blob/main/VariabilaGlobala.postman_environment.json)
+
+
+![Screenshot from postman](https://github.com/legendadr/API-Testing/blob/main/postman.png)
+![Screenshot from postman](https://github.com/legendadr/API-Testing/blob/main/postman2.png)
+
+
+
 
 ## How the token was created
 ### First Steps:
@@ -530,12 +544,7 @@ The playlist's snapshot ID against which you want to make the changes. The API w
 - A snapshot ID for the playlist
 
 
-## Link to collection from postman,screenshot and run with newman:
 
-![Screenshot from postman](https://github.com/legendadr/API-Testing/blob/main/postman.png)
-![Screenshot from postman](https://github.com/legendadr/API-Testing/blob/main/postman2.png)
-- [Collection newman ](https://github.com/legendadr/API-Testing/blob/main/Spotify.postman_collection.json)
-- [Global-environment ](https://github.com/legendadr/API-Testing/blob/main/VariabilaGlobala.postman_environment.json)
 
 
 
