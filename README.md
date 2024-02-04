@@ -23,7 +23,6 @@ Tools used: Postman, Newman.
 
 
 
-
 ## How the token was created
 ### First Steps:
 
@@ -48,6 +47,25 @@ Tools used: Postman, Newman.
 - Finally, press "Get New Access Token". The token has been created.
 
 The response will return an **access token valid for 1 hour**
+
+## Tests performed
+
+1.**Create Playlist**
+- HTTP method for request:POST.
+- Request description:Create a playlist for a Spotify user. (The playlist will be empty until you add tracks.) Each user is generally limited to a maximum of 11000 playlists.
+- Test types / techniques used:Functional testing,performance testing,positive testing.
+- Response status code:201 Created.
+
+Below you can find a picture of the API request from Postman:
+
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/post%20create%20playlist%20request.png)
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/request%20create%20playlist%20response%20.png)
+
+JavaScript Tests:
+
+![Screennhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20java%20script%20post%20create%20playlist.png)
+![Screenshot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20java%20script%20post%20create%20playlist.png)
+
 
 ## Types available for testing
 
