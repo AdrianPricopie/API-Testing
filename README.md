@@ -64,7 +64,7 @@ Below you can find a picture of the API request from Postman:
 JavaScript Tests:
 
 ![Screennhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20java%20script%20post%20create%20playlist.png)
-![Screenshot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20java%20script%20post%20create%20playlist.png)
+![Screenshot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/java%20script%20test%20result%20for%20create%20playlist.png)
 
 
 ## Types available for testing
