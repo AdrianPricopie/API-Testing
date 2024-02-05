@@ -79,6 +79,19 @@ JavaScript Tests:
 
 ![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/Java%20script%20test%20result%20additeminplaylist.png)
 
+3.**Update Playlist Items **
+- HTTP method for request:PUT.
+- Request description:Either reorder or replace items in a playlist depending on the request's parameters. To reorder items, include range_start, insert_before, range_length and snapshot_id in the request's body. To replace items, include uris as either a query parameter or in the request's body. Replacing items in a playlist will overwrite its existing items. This operation can be used for replacing or clearing items in a playlist.
+Note: Replace and reorder are mutually exclusive operations which share the same endpoint, but have different parameters. These operations can't be applied together in a single request.
+- Test types / techniques used:Functional testing,performance testing,positive testing.
+- Response status code:200 OK.
+
+Below you can find a picture of the API request from Postman:
+
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/UpdatPlaylistItem%20request.png)
+
+JavaScript Tests:
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/test%20java%20script%20updateitemplaylist.png)
 
 
 ## Types available for testing
