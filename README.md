@@ -65,6 +65,21 @@ JavaScript Tests:
 ![Screennhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20java%20script%20post%20create%20playlist.png)
 ![Screenshot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/java%20script%20test%20result%20for%20create%20playlist.png)
 
+1.**Add Item in playlist**
+- HTTP method for request:POST.
+- Request description:Add one or more items to a user's playlist.
+- Test types / techniques used:Functional testing,performance testing,positive testing.
+- Response status code:201 Created.
+
+Below you can find a picture of the API request from Postman:
+
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/addItemInPlaylist%20request.png)
+
+JavaScript Tests:
+
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/Java%20script%20test%20result%20additeminplaylist.png)
+
+
 
 ## Types available for testing
 
