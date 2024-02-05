@@ -93,6 +93,20 @@ Below you can find a picture of the API request from Postman:
 JavaScript Tests:
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/test%20java%20script%20updateitemplaylist.png)
 
+4.**Get Playlist**
+- HTTP method for request:GET.
+- Request description:Get a playlist owned by a Spotify user.
+- Test types / techniques used:Functional testing,performance testing,positive testing.
+- Response status code:201 Created.
+
+Below you can find a picture of the API request from Postman:
+
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/Get%20playlist%20item.png)
+
+JavaScript Tests:
+
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/get%20playlist%20item%20test%20javascript.png)
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/javascript%20test%20result%20getplaylistitem.png)
 
 ## Types available for testing
 
