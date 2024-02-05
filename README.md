@@ -47,6 +47,33 @@ Tools used: Postman, Newman.
 
 The response will return an **access token valid for 1 hour**
 
+## Types available for testing
+
+HTTP methods supported by this API are GET, POST, PUT, PATCH, and DELETE. In this section, you can explore and perform tests on various types of operations supported by the Spotify Web API. Some examples include:
+
+- **GET Requests:** Retrieve information about artists, albums, playlists, etc.
+- **POST Requests:** Create new playlists, add tracks, etc.
+- **PUT and PATCH Requests:** Update existing data, modify playlists, etc.
+- **DELETE Requests:** Remove playlists, tracks, etc.
+
+## Tests used for validation
+
+For this API, an authentication token is needed.
+#### I send responses to some endpoints:
+- `https://api.spotify.com/v1/users/{user_id}/playlists` (Create playlist)
+- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Add Item to playlist)
+- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Update Item to playlist)
+- `https://api.spotify.com/v1/playlists/{playlist_id}` (Get playlist)
+- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Remove playlistItem)
+- `https://api.spotify.com/v1/playlists/{playlist_id}` (Change playlist details)
+- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Add item in playlist)
+- `https://api.spotify.com/v1/playlists/{playlist_id}/followers` (Follow playlist)
+- Using all available HTTP methods.
+- The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204,404 and 401).
+- I wrote test-cases through which I validated the answer coming from the available templates that Postman offers.
+  Here you can find the list of [Test conditions](https://github.com/legendadr/API-Testing/blob/main/API_CheckList_TestCondition.xlsx) in Postman.
+
+
 ## Tests performed
 
 1.**Create Playlist**
@@ -108,31 +135,6 @@ JavaScript Tests:
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/get%20playlist%20item%20test%20javascript.png)
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/javascript%20test%20result%20getplaylistitem.png)
 
-## Types available for testing
-
-HTTP methods supported by this API are GET, POST, PUT, PATCH, and DELETE. In this section, you can explore and perform tests on various types of operations supported by the Spotify Web API. Some examples include:
-
-- **GET Requests:** Retrieve information about artists, albums, playlists, etc.
-- **POST Requests:** Create new playlists, add tracks, etc.
-- **PUT and PATCH Requests:** Update existing data, modify playlists, etc.
-- **DELETE Requests:** Remove playlists, tracks, etc.
-
-## Tests used for validation
-
-For this API, an authentication token is needed.
-#### I send responses to some endpoints:
-- `https://api.spotify.com/v1/users/{user_id}/playlists` (Create playlist)
-- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Add Item to playlist)
-- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Update Item to playlist)
-- `https://api.spotify.com/v1/playlists/{playlist_id}` (Get playlist)
-- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Remove playlistItem)
-- `https://api.spotify.com/v1/playlists/{playlist_id}` (Change playlist details)
-- `https://api.spotify.com/v1/playlists/{playlist_id}/tracks` (Add item in playlist)
-- `https://api.spotify.com/v1/playlists/{playlist_id}/followers` (Follow playlist)
-- Using all available HTTP methods.
-- The expected HTTP responses are received together with the HTTP messages following the requests (200, 201, 204,404 and 401).
-- I wrote test-cases through which I validated the answer coming from the available templates that Postman offers.
-  Here you can find the list of [Test conditions](https://github.com/legendadr/API-Testing/blob/main/API_CheckList_TestCondition.xlsx) in Postman.
 
 
 
