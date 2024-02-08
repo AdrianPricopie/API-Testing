@@ -216,5 +216,12 @@ JavaScript Tests:
 
 
 
+## Execution report for the created API collection
+
+Below you can find the execution report that was generated through the Postman collection runner:
+
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/test%20result%20postman%20spotify.png)
+
+[Link collection runner postman](https://github.com/legendadr/API-Testing/blob/main/Spotify.postman_test_run.json)
 
 
