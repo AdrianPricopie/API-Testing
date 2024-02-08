@@ -168,7 +168,7 @@ JavaScript Tests:
 
 
 7.**Follow Playlist**
-- HTTP method for request:GET.
+- HTTP method for request:PUT.
 - Request description:Add the current user as a follower of a playlist.This endpoint allows you to follow a playlist on Spotify by sending an HTTP PUT request to the specified URL. The request should include a payload with the "public" key set to a boolean value to indicate whether the playlist should be made public.
 The response to the request will have a status code of 200 and a content type of text/xml. However, the response body will be null.
 - Test types / techniques used:Functional testing,performance testing,positive testing.
