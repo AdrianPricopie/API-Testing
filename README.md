@@ -14,12 +14,7 @@ For more details about documentation, visit this [website](https://developer.spo
 
 Tools used: Postman, Newman.
 
- Link to collection from postman,screenshot and run with newman: [Collection newman ](https://github.com/legendadr/API-Testing/blob/main/Spotify.postman_collection.json)
- ,[Global-environment ](https://github.com/legendadr/API-Testing/blob/main/VariabilaGlobala.postman_environment.json)
-
-
-![Screenshot from postman](https://github.com/legendadr/API-Testing/blob/main/postman.png)
-
+ Link to collection :
 
 
 ## How the token was created
