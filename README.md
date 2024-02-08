@@ -167,6 +167,23 @@ JavaScript Tests:
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20Java%20script%20GetArtist%20%233.png)
 
 
+7.**Follow Playlist**
+- HTTP method for request:GET.
+- Request description:Add the current user as a follower of a playlist.This endpoint allows you to follow a playlist on Spotify by sending an HTTP PUT request to the specified URL. The request should include a payload with the "public" key set to a boolean value to indicate whether the playlist should be made public.
+The response to the request will have a status code of 200 and a content type of text/xml. However, the response body will be null.
+- Test types / techniques used:Functional testing,performance testing,positive testing.
+- Response status code:200 OK.
+
+Below you can find a picture of the API request from Postman:
+
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/FollowPlaylist.png)
+
+JavaScript Tests:
+
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20Java%20script%20FollowPlaylist.png)
+
+
+
 
 
 
