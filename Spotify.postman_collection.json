@@ -37,7 +37,7 @@
 							"});\r",
 							"pm.test(\"Check playlist description\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.description).to.eql(\"Noua descriere\");\r",
+							"    pm.expect(jsonData.description).to.eql(\"descriere\");\r",
 							"});\r",
 							"pm.test(\"Check total number of followers\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
@@ -54,7 +54,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "BQCqKss0TSewzDW8nOOVGL_TCzIvnoJt5mWp2tfkVbntQsYZLX0fCnzTom79bIdae0y106kpI1-ZvZLA-SMZaUYtkaaO72Pgj6QFy8IsQ21z5-w2rVmRm7wp_E7pBX5BMS5Se01KTu7aQw3Jg4Pl-Ut3xsUfq5wGwxonmF74UpvZ884NIQBBdRPGRyA6fwDryhl7gEqwMMrlsOKXtps8fuIGJlS6gx1iy04nHojajj97c_mZPP7mRfL0KoB_xvEaOVoKqITHaMunSg",
+							"value": "BQCmEsKB_N6SDbf4N-Rz9g6f8KB3iR0sOFympzkCW59TKguduQ2Km5zMQ6yveNx8rH-9q74zh7ZWJ3kCzCO-N4kJyyUi684Qq10J708Mn2BRm4zFssJFng_eBl5RiQAfDA6482s53Kg_E38rVimyKJSud91CVLXdahx6IBIC_NRsvmfEooVAH0p2Y7LfP0t45w5uy_lDftlToyREGuHfeNOSp0RM5_-jYhsgWCskFq24-qLFrIXkWXmKhCvdiRMiH-6ll2g0BIy-aA",
 							"type": "string"
 						}
 					]
@@ -76,7 +76,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"New playlist\",\r\n    \"description\": \"Noua descriere\",\r\n    \"public\": false\r\n}\r\n\r\n\r\n",
+					"raw": "{\r\n    \"name\": \"New playlist\",\r\n    \"description\": \"descriere\",\r\n    \"public\": false\r\n}\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -131,7 +131,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "BQCqKss0TSewzDW8nOOVGL_TCzIvnoJt5mWp2tfkVbntQsYZLX0fCnzTom79bIdae0y106kpI1-ZvZLA-SMZaUYtkaaO72Pgj6QFy8IsQ21z5-w2rVmRm7wp_E7pBX5BMS5Se01KTu7aQw3Jg4Pl-Ut3xsUfq5wGwxonmF74UpvZ884NIQBBdRPGRyA6fwDryhl7gEqwMMrlsOKXtps8fuIGJlS6gx1iy04nHojajj97c_mZPP7mRfL0KoB_xvEaOVoKqITHaMunSg",
+							"value": "BQCmEsKB_N6SDbf4N-Rz9g6f8KB3iR0sOFympzkCW59TKguduQ2Km5zMQ6yveNx8rH-9q74zh7ZWJ3kCzCO-N4kJyyUi684Qq10J708Mn2BRm4zFssJFng_eBl5RiQAfDA6482s53Kg_E38rVimyKJSud91CVLXdahx6IBIC_NRsvmfEooVAH0p2Y7LfP0t45w5uy_lDftlToyREGuHfeNOSp0RM5_-jYhsgWCskFq24-qLFrIXkWXmKhCvdiRMiH-6ll2g0BIy-aA",
 							"type": "string"
 						}
 					]
@@ -196,7 +196,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "BQCqKss0TSewzDW8nOOVGL_TCzIvnoJt5mWp2tfkVbntQsYZLX0fCnzTom79bIdae0y106kpI1-ZvZLA-SMZaUYtkaaO72Pgj6QFy8IsQ21z5-w2rVmRm7wp_E7pBX5BMS5Se01KTu7aQw3Jg4Pl-Ut3xsUfq5wGwxonmF74UpvZ884NIQBBdRPGRyA6fwDryhl7gEqwMMrlsOKXtps8fuIGJlS6gx1iy04nHojajj97c_mZPP7mRfL0KoB_xvEaOVoKqITHaMunSg",
+							"value": "BQCmEsKB_N6SDbf4N-Rz9g6f8KB3iR0sOFympzkCW59TKguduQ2Km5zMQ6yveNx8rH-9q74zh7ZWJ3kCzCO-N4kJyyUi684Qq10J708Mn2BRm4zFssJFng_eBl5RiQAfDA6482s53Kg_E38rVimyKJSud91CVLXdahx6IBIC_NRsvmfEooVAH0p2Y7LfP0t45w5uy_lDftlToyREGuHfeNOSp0RM5_-jYhsgWCskFq24-qLFrIXkWXmKhCvdiRMiH-6ll2g0BIy-aA",
 							"type": "string"
 						}
 					]
@@ -253,7 +253,7 @@
 							"});\r",
 							"pm.test(\"Check playlist type.\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.public).to.eql(false);\r",
+							"    pm.expect(jsonData.public).to.eql(true);\r",
 							"});\r",
 							"pm.test(\"Check playlist name\", function () {\r",
 							"    var jsonData = pm.response.json();\r",
@@ -269,19 +269,26 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "BQCqKss0TSewzDW8nOOVGL_TCzIvnoJt5mWp2tfkVbntQsYZLX0fCnzTom79bIdae0y106kpI1-ZvZLA-SMZaUYtkaaO72Pgj6QFy8IsQ21z5-w2rVmRm7wp_E7pBX5BMS5Se01KTu7aQw3Jg4Pl-Ut3xsUfq5wGwxonmF74UpvZ884NIQBBdRPGRyA6fwDryhl7gEqwMMrlsOKXtps8fuIGJlS6gx1iy04nHojajj97c_mZPP7mRfL0KoB_xvEaOVoKqITHaMunSg",
+							"value": "BQCmEsKB_N6SDbf4N-Rz9g6f8KB3iR0sOFympzkCW59TKguduQ2Km5zMQ6yveNx8rH-9q74zh7ZWJ3kCzCO-N4kJyyUi684Qq10J708Mn2BRm4zFssJFng_eBl5RiQAfDA6482s53Kg_E38rVimyKJSud91CVLXdahx6IBIC_NRsvmfEooVAH0p2Y7LfP0t45w5uy_lDftlToyREGuHfeNOSp0RM5_-jYhsgWCskFq24-qLFrIXkWXmKhCvdiRMiH-6ll2g0BIy-aA",
 							"type": "string"
 						}
 					]
 				},
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
 				"url": {
 					"raw": "https://api.spotify.com/v1/playlists/0TaUzklrbGfM49922qcoAZ",
 					"protocol": "https",
@@ -294,6 +301,13 @@
 						"v1",
 						"playlists",
 						"0TaUzklrbGfM49922qcoAZ"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
 					]
 				}
 			},
@@ -327,7 +341,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "BQCqKss0TSewzDW8nOOVGL_TCzIvnoJt5mWp2tfkVbntQsYZLX0fCnzTom79bIdae0y106kpI1-ZvZLA-SMZaUYtkaaO72Pgj6QFy8IsQ21z5-w2rVmRm7wp_E7pBX5BMS5Se01KTu7aQw3Jg4Pl-Ut3xsUfq5wGwxonmF74UpvZ884NIQBBdRPGRyA6fwDryhl7gEqwMMrlsOKXtps8fuIGJlS6gx1iy04nHojajj97c_mZPP7mRfL0KoB_xvEaOVoKqITHaMunSg",
+							"value": "BQCmEsKB_N6SDbf4N-Rz9g6f8KB3iR0sOFympzkCW59TKguduQ2Km5zMQ6yveNx8rH-9q74zh7ZWJ3kCzCO-N4kJyyUi684Qq10J708Mn2BRm4zFssJFng_eBl5RiQAfDA6482s53Kg_E38rVimyKJSud91CVLXdahx6IBIC_NRsvmfEooVAH0p2Y7LfP0t45w5uy_lDftlToyREGuHfeNOSp0RM5_-jYhsgWCskFq24-qLFrIXkWXmKhCvdiRMiH-6ll2g0BIy-aA",
 							"type": "string"
 						}
 					]
@@ -428,7 +442,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "BQCqKss0TSewzDW8nOOVGL_TCzIvnoJt5mWp2tfkVbntQsYZLX0fCnzTom79bIdae0y106kpI1-ZvZLA-SMZaUYtkaaO72Pgj6QFy8IsQ21z5-w2rVmRm7wp_E7pBX5BMS5Se01KTu7aQw3Jg4Pl-Ut3xsUfq5wGwxonmF74UpvZ884NIQBBdRPGRyA6fwDryhl7gEqwMMrlsOKXtps8fuIGJlS6gx1iy04nHojajj97c_mZPP7mRfL0KoB_xvEaOVoKqITHaMunSg",
+							"value": "BQCmEsKB_N6SDbf4N-Rz9g6f8KB3iR0sOFympzkCW59TKguduQ2Km5zMQ6yveNx8rH-9q74zh7ZWJ3kCzCO-N4kJyyUi684Qq10J708Mn2BRm4zFssJFng_eBl5RiQAfDA6482s53Kg_E38rVimyKJSud91CVLXdahx6IBIC_NRsvmfEooVAH0p2Y7LfP0t45w5uy_lDftlToyREGuHfeNOSp0RM5_-jYhsgWCskFq24-qLFrIXkWXmKhCvdiRMiH-6ll2g0BIy-aA",
 							"type": "string"
 						}
 					]
@@ -448,7 +462,8 @@
 						"artists",
 						"3TVXtAsR1Inumwj472S9r4"
 					]
-				}
+				},
+				"description": "This endpoint makes an HTTP GET request to retrieve information about a specific artist from the Spotify API. The response will include details such as the artist's external URLs, number of followers, genres, images, name, popularity, and URI. The response will be in JSON format with a status code of 200."
 			},
 			"response": []
 		},
@@ -464,6 +479,15 @@
 							"});\r",
 							"pm.test(\"Verify that Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify that the response body is null\", function () {\r",
+							"    const responseData = xml2Json(pm.response.text());\r",
+							"    \r",
+							"    pm.expect(responseData).to.be.null;\r",
+							"});\r",
+							"pm.test(\"Validate that the request URL is correct\", function () {\r",
+							"    pm.expect(pm.request.url.toString()).to.equal(\"https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n/followers\");\r",
 							"});"
 						],
 						"type": "text/javascript"
@@ -476,7 +500,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "BQCqKss0TSewzDW8nOOVGL_TCzIvnoJt5mWp2tfkVbntQsYZLX0fCnzTom79bIdae0y106kpI1-ZvZLA-SMZaUYtkaaO72Pgj6QFy8IsQ21z5-w2rVmRm7wp_E7pBX5BMS5Se01KTu7aQw3Jg4Pl-Ut3xsUfq5wGwxonmF74UpvZ884NIQBBdRPGRyA6fwDryhl7gEqwMMrlsOKXtps8fuIGJlS6gx1iy04nHojajj97c_mZPP7mRfL0KoB_xvEaOVoKqITHaMunSg",
+							"value": "BQCmEsKB_N6SDbf4N-Rz9g6f8KB3iR0sOFympzkCW59TKguduQ2Km5zMQ6yveNx8rH-9q74zh7ZWJ3kCzCO-N4kJyyUi684Qq10J708Mn2BRm4zFssJFng_eBl5RiQAfDA6482s53Kg_E38rVimyKJSud91CVLXdahx6IBIC_NRsvmfEooVAH0p2Y7LfP0t45w5uy_lDftlToyREGuHfeNOSp0RM5_-jYhsgWCskFq24-qLFrIXkWXmKhCvdiRMiH-6ll2g0BIy-aA",
 							"type": "string"
 						}
 					]
@@ -506,7 +530,8 @@
 						"3cEYpjA9oz9GiPac4AsH4n",
 						"followers"
 					]
-				}
+				},
+				"description": "\nThis endpoint allows you to follow a playlist on Spotify by sending an HTTP PUT request to the specified URL. The request should include a payload with the \"public\" key set to a boolean value to indicate whether the playlist should be made public.\n\nThe response to the request will have a status code of 200 and a content type of text/xml. However, the response body will be null.\n"
 			},
 			"response": []
 		},
@@ -541,6 +566,16 @@
 							"pm.test(\"Verify that the status message is Unauthorized\", function () {\r",
 							"    pm.response.to.have.status(\"Unauthorized\");\r",
 							"})\r",
+							"\r",
+							"pm.test(\"Verify that Error object is present in the response\", function () {\r",
+							"  const responseData = pm.response.json();\r",
+							"  \r",
+							"  pm.expect(responseData).to.have.property('error').that.is.an('object');\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
 							""
 						],
 						"type": "text/javascript"
@@ -553,7 +588,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "dQAOsDMzCaDbFz_Q8uCnMxNyxBcQ4lbO1h0t_ohlN4vFdeU6VAHdS7H0M_oiJS34YZP0VZRf7TB_fcSDU9iiHq-XFld6Jy_1SMVBFnwvhAZ0kRRyPj8GS_qIzTUcVsqCsPSvXbUNut3yr7h5XMLzaQnfglfxqGxHsalySotrjsD2Az2DB8968CToV-C66illcs5QJf9TR_YVtZfrETr3Q0Ya_NAa85YqGrmsp33U2O6PiDt6Hub7WiRZLc0lSYjkRIAFHsFtHTwW8A",
+							"value": "BQCmEsKB_N6SDbf4N-Rz9g6f8KB3iR0sOFympzkCW59TKguduQ2Km5zMQ6yveNx8rH-9q74zh7ZWJ3kCzCO-N4kJyyUi684Qq10J708Mn2BRm4zFssJFng_eBl5RiQAfDA6482s53Kg_E38rVimyKJSud91CVLXdahx6IBIC_NRsvmfEooVAH0p2Y7LfP0t45w5uy_lDftlToyREGuHfeNOSp0RM5_-jYhsgWCskFq24-qLFrIXkWXmKhCvdiRMiH-6ll2g0BIy-aj",
 							"type": "string"
 						}
 					]
@@ -583,7 +618,8 @@
 						"3cEYpjA9oz9GiPac4AsH4n",
 						"followers"
 					]
-				}
+				},
+				"description": "\nThis endpoint allows you to update the followers of a specific playlist on Spotify. By making an HTTP PUT request to the provided URL, you can modify the followers of the playlist.\n\n### Request Body\n- The request should include a raw JSON payload with the following key-value pair:\n  - `public`: A boolean value indicating whether the playlist should be publicly followed (`true`) or not (`false`).\n\n### Response\nThe API responds with a status code of 401 and a JSON object containing an error status and message.\n\n"
 			},
 			"response": []
 		},
@@ -599,7 +635,11 @@
 							"});\r",
 							"pm.test(\"Verify if that Response time is less than 400ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
-							"});"
+							"});\r",
+							"pm.test(\"Verify if that Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -611,7 +651,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "BQCqKss0TSewzDW8nOOVGL_TCzIvnoJt5mWp2tfkVbntQsYZLX0fCnzTom79bIdae0y106kpI1-ZvZLA-SMZaUYtkaaO72Pgj6QFy8IsQ21z5-w2rVmRm7wp_E7pBX5BMS5Se01KTu7aQw3Jg4Pl-Ut3xsUfq5wGwxonmF74UpvZ884NIQBBdRPGRyA6fwDryhl7gEqwMMrlsOKXtps8fuIGJlS6gx1iy04nHojajj97c_mZPP7mRfL0KoB_xvEaOVoKqITHaMunSg",
+							"value": "BQCmEsKB_N6SDbf4N-Rz9g6f8KB3iR0sOFympzkCW59TKguduQ2Km5zMQ6yveNx8rH-9q74zh7ZWJ3kCzCO-N4kJyyUi684Qq10J708Mn2BRm4zFssJFng_eBl5RiQAfDA6482s53Kg_E38rVimyKJSud91CVLXdahx6IBIC_NRsvmfEooVAH0p2Y7LfP0t45w5uy_lDftlToyREGuHfeNOSp0RM5_-jYhsgWCskFq24-qLFrIXkWXmKhCvdiRMiH-6ll2g0BIy-aA",
 							"type": "string"
 						}
 					]
@@ -632,7 +672,8 @@
 						"3cEYpjA9oz9GiPac4AsH4n",
 						"followers"
 					]
-				}
+				},
+				"description": "\nThis endpoint sends an HTTP DELETE request to remove followers from a specific playlist on Spotify. \n\nThe response returned a status code of 200 and a Content-Type of text/xml.\n"
 			},
 			"response": []
 		}
