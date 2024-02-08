@@ -220,8 +220,12 @@ JavaScript Tests:
 
 Below you can find the execution report that was generated through the Postman collection runner:
 
-![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/test%20result%20postman%20spotify.png)
+![Postman collection runner](https://github.com/legendadr/API-Testing/blob/main/test%20result%20postman%20spotify.png)
 
 [Link collection runner postman](https://github.com/legendadr/API-Testing/blob/main/Spotify.postman_test_run.json)
+
+The collection was also run through newman directly from the terminal, and the results can be found below:
+
+![Newman collection](https://github.com/legendadr/API-Testing/blob/main/run%20collection%20with%20newman.png)
 
 
