@@ -183,7 +183,16 @@ JavaScript Tests:
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20Java%20script%20FollowPlaylist.png)
 
 
+8.**Follow Playlist With invalid token**
+- HTTP method for request:PUT.
+- Request description:Add the current user as a follower of a playlist.The API responds with a status code of 401 and a JSON object containing an error status and message.
+- Test types / techniques used:Functional testing,performance testing,negative testing.
+- Response status code:401 Unauthorized.
 
+
+JavaScript Tests:
+
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/java%20script%20test%20FollowPlaylistWithinvalidtoken.png)
 
 
 
