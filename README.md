@@ -135,6 +135,20 @@ JavaScript Tests:
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/get%20playlist%20item%20test%20javascript.png)
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/javascript%20test%20result%20getplaylistitem.png)
 
+4.**Change Playlist Details**
+- HTTP method for request:PUT.
+- Request description:Change a playlist's name and public/private state. (The user must, of course, own the playlist.)
+- Test types / techniques used:Functional testing,performance testing,positive testing.
+- Response status code:200 OK.
+
+Below you can find a picture of the API request from Postman:
+
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/changePlaylistDetails.png)
+
+JavaScript Tests:
+
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/changePlaylistDetails%20Test%20Java.png)
+
 
 
 
