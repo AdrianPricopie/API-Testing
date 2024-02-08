@@ -152,7 +152,7 @@ JavaScript Tests:
 
 6.**Get Artist**
 - HTTP method for request:GET.
-- Request description:Get Spotify catalog information for a single artist identified by their unique Spotify ID.This endpoint makes an HTTP GET request to retrieve information about a specific artist from the Spotify API. The response will include details such as the artist's external URLs, number of followers, genres, images, name, popularity, and URI. The response will be in JSON format with a status code of 200.
+- Request description:Get Spotify catalog information for a single artist identified by their unique Spotify ID.This endpoint makes an HTTP GET request to retrieve information about a specific artist from the Spotify API. The response will include details such as the artist's external URLs, number of followers, genres, images, name, and popularity. The response will be in JSON format with a status code of 200.
 - Test types / techniques used:Functional testing,performance testing,positive testing.
 - Response status code:200 OK.
 
