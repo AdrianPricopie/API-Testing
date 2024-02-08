@@ -189,6 +189,10 @@ JavaScript Tests:
 - Test types / techniques used:Functional testing,performance testing,negative testing.
 - Response status code:401 Unauthorized.
 
+Below you can find a picture of the API request from Postman:
+
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/FollowPlaylistWithInvalidToken.png)
+
 
 JavaScript Tests:
 
