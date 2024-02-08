@@ -199,6 +199,20 @@ JavaScript Tests:
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/java%20script%20test%20FollowPlaylistWithinvalidtoken.png)
 
 
+9.**UnFollow Playlist**
+- HTTP method for request:DELETE.
+- Request description:Remove the current user as a follower of a playlist.
+- Test types / techniques used:Functional testing,performance testing,negative testing.
+- Response status code:200 OK.
+
+Below you can find a picture of the API request from Postman:
+
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/UnFollowPlaylist.png)
+
+
+JavaScript Tests:
+
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Java%20script%20test%20UnFollowPlaylist.png)
 
 
 
