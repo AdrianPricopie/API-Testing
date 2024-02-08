@@ -14,7 +14,7 @@ For more details about documentation, visit this [website](https://developer.spo
 
 Tools used: Postman, Newman.
 
- Link to collection :[API collection ](https://github.com/legendadr/API-Testing/blob/main/Spotify.postman_collection.json).
+ Link to collection :[API postman spotify collection ](https://github.com/legendadr/API-Testing/blob/main/Spotify.postman_collection.json).
 
 ## How the token was created
 ### First Steps:
