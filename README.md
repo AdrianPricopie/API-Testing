@@ -106,7 +106,7 @@ JavaScript Tests:
 
 ![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/Java%20script%20test%20result%20additeminplaylist.png)
 
-3.**Update Playlist Items **
+3.**Update Playlist Items**
 - HTTP method for request:PUT.
 - Request description:Either reorder or replace items in a playlist depending on the request's parameters. To reorder items, include range_start, insert_before, range_length and snapshot_id in the request's body. To replace items, include uris as either a query parameter or in the request's body. Replacing items in a playlist will overwrite its existing items. This operation can be used for replacing or clearing items in a playlist.
 Note: Replace and reorder are mutually exclusive operations which share the same endpoint, but have different parameters. These operations can't be applied together in a single request.
@@ -135,7 +135,7 @@ JavaScript Tests:
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/get%20playlist%20item%20test%20javascript.png)
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/javascript%20test%20result%20getplaylistitem.png)
 
-4.**Change Playlist Details**
+5.**Change Playlist Details**
 - HTTP method for request:PUT.
 - Request description:Change a playlist's name and public/private state. (The user must, of course, own the playlist.)
 - Test types / techniques used:Functional testing,performance testing,positive testing.
@@ -149,6 +149,22 @@ JavaScript Tests:
 
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/changePlaylistDetails%20Test%20Java.png)
 
+
+6.**Get Artist**
+- HTTP method for request:GET.
+- Request description:Get Spotify catalog information for a single artist identified by their unique Spotify ID.This endpoint makes an HTTP GET request to retrieve information about a specific artist from the Spotify API. The response will include details such as the artist's external URLs, number of followers, genres, images, name, popularity, and URI. The response will be in JSON format with a status code of 200.
+- Test types / techniques used:Functional testing,performance testing,positive testing.
+- Response status code:200 OK.
+
+Below you can find a picture of the API request from Postman:
+
+![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/GetAnArtist.png)
+
+JavaScript Tests:
+
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20Java%20script%20GetArtist.png)
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20Java%20script%20GetArtist%20%232.png)
+![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/Test%20Java%20script%20GetArtist%20%233.png)
 
 
 
