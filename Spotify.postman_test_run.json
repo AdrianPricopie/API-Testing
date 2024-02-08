@@ -1,0 +1,535 @@
+{
+	"id": "f13fa6c6-e46d-4959-8115-5ae7d7e953a4",
+	"name": "Spotify",
+	"timestamp": "2024-02-08T17:08:05.102Z",
+	"collection_id": "29881829-ac0b01e7-66ec-4afb-b3a6-0444e8d28716",
+	"folder_id": 0,
+	"environment_id": "29881829-26150066-2dc9-4a06-a036-5840d34cdd57",
+	"totalPass": 47,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-02-08T17:08:01.228Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "5cc039e5-a573-49c7-a3c1-c0f90ae2c006",
+			"name": "CreatePlaylist",
+			"url": "https://api.spotify.com/v1/users/31klgihdqmygxigfetdciouflnfu/playlists",
+			"time": 383,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verify that the Status code is 201 Created": true,
+				"Verify that the status message is Created": true,
+				"Verify if that Response time is less than 400ms": true,
+				"Check playlist owner.": true,
+				"Check playlist type.": true,
+				"Check playlist name": true,
+				"Check playlist description": true,
+				"Check total number of followers": true
+			},
+			"testPassFailCounts": {
+				"Verify that the Status code is 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the status message is Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if that Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check playlist owner.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check playlist type.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check playlist name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check playlist description": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check total number of followers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				383
+			],
+			"allTests": [
+				{
+					"Verify that the Status code is 201 Created": true,
+					"Verify that the status message is Created": true,
+					"Verify if that Response time is less than 400ms": true,
+					"Check playlist owner.": true,
+					"Check playlist type.": true,
+					"Check playlist name": true,
+					"Check playlist description": true,
+					"Check total number of followers": true
+				}
+			]
+		},
+		{
+			"id": "8188faf8-54f5-4b91-9228-750c33d98a6d",
+			"name": "AddItemInPlaylist",
+			"url": "https://api.spotify.com/v1/playlists/0TaUzklrbGfM49922qcoAZ/tracks",
+			"time": 297,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Verify that Status code is 201 Created": true,
+				"Verify if that Response time is less than 400ms": true,
+				"Verify that snapshot_id exists and has 60 characters": true
+			},
+			"testPassFailCounts": {
+				"Verify that Status code is 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if that Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that snapshot_id exists and has 60 characters": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				297
+			],
+			"allTests": [
+				{
+					"Verify that Status code is 201 Created": true,
+					"Verify if that Response time is less than 400ms": true,
+					"Verify that snapshot_id exists and has 60 characters": true
+				}
+			]
+		},
+		{
+			"id": "df9a227e-8e5a-4c1b-8b7a-dd676a312ddd",
+			"name": "UpdatePlaylistItem",
+			"url": "https://api.spotify.com/v1/playlists/0TaUzklrbGfM49922qcoAZ/tracks",
+			"time": 271,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify that Status code is 200": true,
+				"Verify if that Response time is less than 400ms": true,
+				"Verify that snapshot_id exists and has 60 characters": true
+			},
+			"testPassFailCounts": {
+				"Verify that Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if that Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that snapshot_id exists and has 60 characters": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				271
+			],
+			"allTests": [
+				{
+					"Verify that Status code is 200": true,
+					"Verify if that Response time is less than 400ms": true,
+					"Verify that snapshot_id exists and has 60 characters": true
+				}
+			]
+		},
+		{
+			"id": "eef3f024-dab7-4112-bb4d-6d8ee020c30a",
+			"name": "GetPlayList",
+			"url": "https://api.spotify.com/v1/playlists/0TaUzklrbGfM49922qcoAZ",
+			"time": 582,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify that the Status code is 200 ": true,
+				"Verify that the status message is  OK ": true,
+				"Verify  that Response time is less than 400ms": false,
+				"Check playlist owner.": true,
+				"Check playlist type.": true,
+				"Check playlist name": true,
+				"Check total number of followers": true
+			},
+			"testPassFailCounts": {
+				"Verify that the Status code is 200 ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the status message is  OK ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify  that Response time is less than 400ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Check playlist owner.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check playlist type.": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check playlist name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check total number of followers": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				582
+			],
+			"allTests": [
+				{
+					"Verify that the Status code is 200 ": true,
+					"Verify that the status message is  OK ": true,
+					"Verify  that Response time is less than 400ms": false,
+					"Check playlist owner.": true,
+					"Check playlist type.": true,
+					"Check playlist name": true,
+					"Check total number of followers": true
+				}
+			]
+		},
+		{
+			"id": "7c1baba7-a237-42a3-8bfb-814e6c9d23b7",
+			"name": "ChangePlaylistDetails",
+			"url": "https://api.spotify.com/v1/playlists/0TaUzklrbGfM49922qcoAZ",
+			"time": 301,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify that Status code is 200 OK": true,
+				"Verify that Response body is empty": true,
+				"Verify that Response time is less than 400ms": true
+			},
+			"testPassFailCounts": {
+				"Verify that Status code is 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that Response body is empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				301
+			],
+			"allTests": [
+				{
+					"Verify that Status code is 200 OK": true,
+					"Verify that Response body is empty": true,
+					"Verify that Response time is less than 400ms": true
+				}
+			]
+		},
+		{
+			"id": "a6a94447-90df-4e4d-9b12-8a0f65965f8a",
+			"name": "GetArtist",
+			"url": "https://api.spotify.com/v1/artists/3TVXtAsR1Inumwj472S9r4",
+			"time": 227,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify that Response time is less than 400ms": true,
+				"Verify that Status code is 200": true,
+				"Verify that Status code name has string": true,
+				"Verify that Response has at least one image": true,
+				"Verify that response has an ID": true,
+				"Check if the total number of followers is within the range 1,000,000 to 100,000,000": true,
+				"Verify that popularity is a number  ": true,
+				"Verify that Artist name is Drake": true,
+				"Verify that Artist popularity is greater than 90": true,
+				"Check if the genres include hip hop,pop rap ,canadian pop and canadian hip hop": true,
+				"Check if the height and width of the first image are both 640": true,
+				"Check  if  the height and width of the second image are both 320": true
+			},
+			"testPassFailCounts": {
+				"Verify that Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that Response has at least one image": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that response has an ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if the total number of followers is within the range 1,000,000 to 100,000,000": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that popularity is a number  ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that Artist name is Drake": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that Artist popularity is greater than 90": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if the genres include hip hop,pop rap ,canadian pop and canadian hip hop": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if the height and width of the first image are both 640": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check  if  the height and width of the second image are both 320": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				227
+			],
+			"allTests": [
+				{
+					"Verify that Response time is less than 400ms": true,
+					"Verify that Status code is 200": true,
+					"Verify that Status code name has string": true,
+					"Verify that Response has at least one image": true,
+					"Verify that response has an ID": true,
+					"Check if the total number of followers is within the range 1,000,000 to 100,000,000": true,
+					"Verify that popularity is a number  ": true,
+					"Verify that Artist name is Drake": true,
+					"Verify that Artist popularity is greater than 90": true,
+					"Check if the genres include hip hop,pop rap ,canadian pop and canadian hip hop": true,
+					"Check if the height and width of the first image are both 640": true,
+					"Check  if  the height and width of the second image are both 320": true
+				}
+			]
+		},
+		{
+			"id": "c4a131f7-52c4-4003-839f-0e37f9eea62f",
+			"name": "FollowPlaylist",
+			"url": "https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n/followers",
+			"time": 236,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify that Response time is less than 400ms": true,
+				"Verify that Status code is 200": true,
+				"Verify that the response body is null": true,
+				"Validate that the request URL is correct": true
+			},
+			"testPassFailCounts": {
+				"Verify that Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the response body is null": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate that the request URL is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				236
+			],
+			"allTests": [
+				{
+					"Verify that Response time is less than 400ms": true,
+					"Verify that Status code is 200": true,
+					"Verify that the response body is null": true,
+					"Validate that the request URL is correct": true
+				}
+			]
+		},
+		{
+			"id": "38fe4adc-d2aa-4124-8366-484594182600",
+			"name": "FollowPlaylistWithInvalidToken",
+			"url": "https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n/followers",
+			"time": 173,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Verify that the Status code is 401": true,
+				"Verify if the response returned an error when we are using an invalid token ": true,
+				"Verify if that Response time is less than 400ms": true,
+				"Verify that the status message is Unauthorized": true,
+				"Verify that Error object is present in the response": true
+			},
+			"testPassFailCounts": {
+				"Verify that the Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if the response returned an error when we are using an invalid token ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if that Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that the status message is Unauthorized": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify that Error object is present in the response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				173
+			],
+			"allTests": [
+				{
+					"Verify that the Status code is 401": true,
+					"Verify if the response returned an error when we are using an invalid token ": true,
+					"Verify if that Response time is less than 400ms": true,
+					"Verify that the status message is Unauthorized": true,
+					"Verify that Error object is present in the response": true
+				}
+			]
+		},
+		{
+			"id": "2274bb3a-c201-4aad-973a-8186a5bc456d",
+			"name": "UnFollowPlaylist",
+			"url": "https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n/followers",
+			"time": 260,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verify that Status code is 200": true,
+				"Verify if that Response time is less than 400ms": true,
+				"Verify if that Status code name has string": true
+			},
+			"testPassFailCounts": {
+				"Verify that Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if that Response time is less than 400ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify if that Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				260
+			],
+			"allTests": [
+				{
+					"Verify that Status code is 200": true,
+					"Verify if that Response time is less than 400ms": true,
+					"Verify if that Status code name has string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2730,
+	"collection": {
+		"requests": [
+			{
+				"id": "5cc039e5-a573-49c7-a3c1-c0f90ae2c006",
+				"method": "POST"
+			},
+			{
+				"id": "8188faf8-54f5-4b91-9228-750c33d98a6d",
+				"method": "POST"
+			},
+			{
+				"id": "df9a227e-8e5a-4c1b-8b7a-dd676a312ddd",
+				"method": "PUT"
+			},
+			{
+				"id": "eef3f024-dab7-4112-bb4d-6d8ee020c30a",
+				"method": "GET"
+			},
+			{
+				"id": "7c1baba7-a237-42a3-8bfb-814e6c9d23b7",
+				"method": "PUT"
+			},
+			{
+				"id": "a6a94447-90df-4e4d-9b12-8a0f65965f8a",
+				"method": "GET"
+			},
+			{
+				"id": "c4a131f7-52c4-4003-839f-0e37f9eea62f",
+				"method": "PUT"
+			},
+			{
+				"id": "38fe4adc-d2aa-4124-8366-484594182600",
+				"method": "PUT"
+			},
+			{
+				"id": "2274bb3a-c201-4aad-973a-8186a5bc456d",
+				"method": "DELETE"
+			}
+		]
+	}
+}
