@@ -196,7 +196,7 @@ JavaScript Tests:
 9.**UnFollow Playlist**
 - HTTP method for request:DELETE.
 - Request description:Remove the current user as a follower of a playlist.
-- Test types / techniques used:Functional testing,performance testing,negative testing.
+- Test types / techniques used:Functional testing,performance testing,pozitive testing.
 - Response status code:200 OK.
 
 Below you can find a picture of the API request from Postman:
