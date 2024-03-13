@@ -236,6 +236,8 @@ The collection was also run through newman directly from the terminal, and the r
 
 ![Newman collection](https://github.com/legendadr/API-Testing/blob/main/run%20collection%20with%20newman.png)
 
+Some issues with response times below 400, but it's not very serious
+
 Retesting on the 11.03.2024:
 
 ![Newman collection](https://github.com/AdrianPricopie/API-Testing/blob/main/newman13.03.2024(2).png)
