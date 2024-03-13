@@ -100,6 +100,18 @@ JavaScript Tests:
 
 ![Screenhot api request with response body ](https://github.com/legendadr/API-Testing/blob/main/Java%20script%20test%20result%20additeminplaylist.png)
 
+
+After retesting on the 11.03.2024 I found two bugs,"Verify that Status code is 201 Created | AssertionError: expected response to have status code 201 but got 200 " and 
+"Verify that snapshot_id exists and has 60 characters | AssertionError: expected 'AAAAATmEmsKBy5L0X3xNY7e/F/r+QmfC' to have a length of 60 but got 32 "
+
+- response body
+![Screenhot api request with response body ](https://github.com/AdrianPricopie/API-Testing/blob/main/addItemInPlaylist%20request(2).png)
+
+-javascript test code:
+
+![Screenhot api request with response body ](https://github.com/AdrianPricopie/API-Testing/blob/main/addItemInPlaylist%20request(3).png)
+
+
 3.**Update Playlist Items**
 - HTTP method for request:PUT.
 - Request description:Either reorder or replace items in a playlist depending on the request's parameters. To reorder items, include range_start, insert_before, range_length and snapshot_id in the request's body. To replace items, include uris as either a query parameter or in the request's body. Replacing items in a playlist will overwrite its existing items. This operation can be used for replacing or clearing items in a playlist.
@@ -113,6 +125,8 @@ Below you can find a picture of the API request from Postman:
 
 JavaScript Tests:
 ![Screenhot JavaScript Tests ](https://github.com/legendadr/API-Testing/blob/main/test%20java%20script%20updateitemplaylist.png)
+
+
 
 4.**Get Playlist**
 - HTTP method for request:GET.
