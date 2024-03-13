@@ -245,8 +245,39 @@ Retesting on the 11.03.2024:
 
 The following issues were identified while running the postman tests:
 
+```
+Issue 1:
+There is an AssertionError in the "AddItemInPlaylist" function. The expected status code is 201 Created, but the received status code is 200.
 
+Details:
+Error Type: AssertionError
+Description: Verify that the Status code is 201 Created.
+Expected Result: The response should have a status code of 201 created.
+Actual Result: The response has a status code of 200.
+Location: assertion:0 in test-script inside "AddItemInPlaylist"
 
+Steps to Reproduce:
+
+1.Execute the "AddItemInPlaylist" function.
+2.Check the returned status code.
+
+Issue 2:
+There is an AssertionError in the "AddItemInPlaylist" function. The snapshot_id is expected to have 60 characters, but it has 32 characters.
+
+Details:
+
+Error Type: AssertionError
+Description: Verify that the snapshot_id exists and has 60 characters.
+Expected Result: The snapshot_id should have a length of 60 characters.
+Actual Result: The snapshot_id has a length of 32 characters.
+Location: assertion:2 in test-script inside "AddItemInPlaylist"
+
+Steps to Reproduce:
+
+1.Execute the "AddItemInPlaylist" function.
+2.Check the length of the snapshot_id in the response.
+
+```
 
 
 
