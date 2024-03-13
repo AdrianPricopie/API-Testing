@@ -236,6 +236,11 @@ The collection was also run through newman directly from the terminal, and the r
 
 ![Newman collection](https://github.com/legendadr/API-Testing/blob/main/run%20collection%20with%20newman.png)
 
+Retesting on the 11.03.2024:
+
+![Newman collection](https://github.com/AdrianPricopie/API-Testing/blob/main/newman13.03.2024(2).png)
+
+
 ## Defects found
 
 The following issues were identified while running the postman tests:
