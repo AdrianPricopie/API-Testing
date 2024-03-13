@@ -245,7 +245,10 @@ Retesting on the 11.03.2024:
 
 The following issues were identified while running the postman tests:
 
-[Bug reports](https://github.com/legendadr/API-Testing/blob/main/APT-66.pdf).
+
+
+
+
 
 ## Conclusions
 
