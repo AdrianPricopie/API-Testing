@@ -254,14 +254,15 @@ There is an AssertionError in the "AddItemInPlaylist" function. The expected sta
 Details:
 Error Type: AssertionError
 Description: Verify that the Status code is 201 Created.
-Expected Result: The response should have a status code of 201 created.
-Actual Result: The response has a status code of 200.
-Location: assertion:0 in test-script inside "AddItemInPlaylist"
 
 Steps to Reproduce:
 
 1.Execute the "AddItemInPlaylist" function.
 2.Check the returned status code.
+
+Expected Result: The response should have a status code of 201 created.
+Actual Result: The response has a status code of 200.
+Location: assertion:0 in test-script inside "AddItemInPlaylist"
 
 Issue 2:
 There is an AssertionError in the "AddItemInPlaylist" function. The snapshot_id is expected to have 60 characters, but it has 32 characters.
@@ -269,15 +270,19 @@ There is an AssertionError in the "AddItemInPlaylist" function. The snapshot_id 
 Details:
 
 Error Type: AssertionError
+
+
 Description: Verify that the snapshot_id exists and has 60 characters.
-Expected Result: The snapshot_id should have a length of 60 characters.
-Actual Result: The snapshot_id has a length of 32 characters.
-Location: assertion:2 in test-script inside "AddItemInPlaylist"
+
 
 Steps to Reproduce:
 
 1.Execute the "AddItemInPlaylist" function.
 2.Check the length of the snapshot_id in the response.
+
+Expected Result: The snapshot_id should have a length of 60 characters.
+Actual Result: The snapshot_id has a length of 32 characters.
+Location: assertion:2 in test-script inside "AddItemInPlaylist"
 
 ```
 
